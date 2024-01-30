@@ -16,8 +16,9 @@ body {
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.005);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg: #000;
+  --switch-bg: white url(./assets/moon-stars.svg);
   --sidebar-menu: #fff;
+  --main-bg: #ebe9e9;
   --header-wrapper: #fff;
   --cryptocurrency-container: #fff;
   --tabular-wrapper: #fff;
@@ -35,7 +36,8 @@ body {
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg: #fff;
+  --switch-bg: white url(./assets/sun.svg);
+  --main-bg: #141616;
   --header-wrapper: #000;
   --cryptocurrency-container: #000;
   --tabular-wrapper: #000;
@@ -142,7 +144,7 @@ body {
 
 .main-content {
   position: relative;
-  background-color: #ebe9e9;
+  background-color: var(--main-bg);
   width: 100%;
   padding: 1rem;
 }
@@ -376,4 +378,24 @@ tfoot td {
 }
 .sol-icon {
   content: url(https://www.cryptocompare.com/media/37747734/sol.png);
+}
+
+/* animation */
+
+@keyframes slide-in {
+  from {
+      left: 0;
+  }
+  to {
+      left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+      left: 50%;
+  }
+  to {
+      left: 0;
+  }
 }
